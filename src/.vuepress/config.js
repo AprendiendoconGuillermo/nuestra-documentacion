@@ -4,11 +4,11 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Aprendiendo con Guillermo 🤓',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: "description",
+  description: "Documentacion de mis cursos",
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -32,17 +32,30 @@ module.exports = {
     lastUpdated: false,   
     nav: [
       {
-        text: 'Guía',
+        text: 'Inicio',
         link: '/',
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Mi canal 📺',
+        link: 'https://www.youtube.com/AprendiendoconGuillermo?sub_confirmation=1'
       }
     ],
     sidebar: [
-      '/',
-      '/java-principiantes/'
+      {
+        title: "Hola 🤓",
+        collapsable: true,
+        children:[
+          "/"
+        ] 
+      },
+      {
+        title: "Java para principiantes desde cero en NetBeans",
+        collapsable: true,
+        children:[
+          "/java-principiantes/",
+          "/java-principiantes/modulo-01"
+        ]
+      }
     ]
   },
 
