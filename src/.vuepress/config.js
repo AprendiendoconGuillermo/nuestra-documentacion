@@ -53,7 +53,8 @@ module.exports = {
         collapsable: true,
         children:[
           "/java-principiantes/",
-          "/java-principiantes/modulo-01"
+          "/java-principiantes/modulo-01",
+          "/java-principiantes/modulo-02"
         ]
       }
     ]

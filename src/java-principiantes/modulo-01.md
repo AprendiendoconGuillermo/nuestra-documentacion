@@ -1,8 +1,8 @@
-# Módulo I. Java, Instalación del IDE y MySQL Workbench 8.0. CE 
+# Módulo I. Java, Instalación del IDE y MySQL Workbench 8.0. CE
 
 ## 1.1 ¿Qué es Java?
 
-El lenguaje de programación Java fue desarrollado por Sun Microsystems; fue presentado al público en la segunda mitad del año 1995. Java es un lenguaje independiente lo que significa que una vez desarrollada alguna aplicación, esta se ejecutará en cualquier máquina sin tener que volver a ejecutarlo. 
+El lenguaje de programación Java fue desarrollado por Sun Microsystems; fue presentado al público en la segunda mitad del año 1995. Java es un lenguaje independiente lo que significa que una vez desarrollada alguna aplicación, esta se ejecutará en cualquier máquina sin tener que volver a ejecutarlo.
 
 Java corre en diversas plataformas con distintos Sistemas Operativos por ejemplo: Windows, Mac Os, Linux, Solaris....
 
@@ -30,12 +30,12 @@ En el ámbito laboral, el conocimiento de este lenguaje es muy solicitado, posee
 
 Las características más relevantes de Java son:
 
-* Simplicidad → debido que elimina los punteros a direcciones de memoria y permite hacer referencias a objetos.
-* Orientada a Objeto → herencia, encapsulamiento y polimorfismo.
-* Distribuido → brinda un abanico de bibliotecas y herramientas.
-* Independiente → puede ser ejecutado en cualquier dispositivo.
-* Multihilo → mejora el rendimiento permitiendo la ejecución de varias acciones a la vez.
-* Garbage Collector → monitorea
+* **Simplicidad** → debido que elimina los punteros a direcciones de memoria y permite hacer referencias a objetos.
+* **Orientada a Objeto** → herencia, encapsulamiento y polimorfismo.
+* **Distribuido** → brinda un abanico de bibliotecas y herramientas.
+* **Independiente** → puede ser ejecutado en cualquier dispositivo.
+* **Multihilo** → mejora el rendimiento permitiendo la ejecución de varias acciones a la vez.
+* **Garbage Collector** → monitorea
 
 ## 1.4 Funcionamiento
 
@@ -43,16 +43,19 @@ Java se diferencia de los demás lenguajes, este utiliza tanto un compilador que
 
 La ejecución de un proyecto XYZ que se esté realizando, pasa por estas capas:
 
-**Fuente Java** → es el archivo con extensión .java
-
+**Fuente Java** → es el archivo con extensión .java.  
 Esta extensión no puede ser entendida por el ordenador por lo que las herramientas javac y otras lo compila y prepara para la segunda capa.
 
-Bytecodes → es el archivo con extensión .class
+**Bytecodes** → es el archivo con extensión .class
 Son un conjunto de instrucciones altamente optimizadas y neutras del procesador que se encuentran diseñadas para ser ejecutadas por JVM.
-Máquina Virtual Java (JVM) → ejecuta el Bytecodes
+
+**Máquina Virtual Java (JVM)** → ejecuta el Bytecodes
 Cada dispositivo sin considerar su arquitectura poseen una Máquina Virtual Java que lee los Bytecodes y los convierte en unos y ceros, es decir, a lenguaje máquina. Además, proporciona una biblioteca de recursos que permiten acceder a recursos del dispositivo por ejemplo: gráficos, interfaces de red, Threads, etc.
 
-<img :src="$withBase('/img/1.png')" alt="Funcionamiento">
+<div style="text-align: center;">
+<img :src="$withBase('/img/1.png')" alt="Figura 1. Ejecución Interna de programas en Java">
+<p>Figura 1. Ejecución Interna de programas en Java</p>
+</div>
 
 ## 1.5 ¿Qué es NetBeans?
 
@@ -68,11 +71,31 @@ Otras herramientas que nos permiten trabajar con el lenguaje de programación Ja
 
 * **Eclipse** → es un entorno profesional que se puede utilizar para desarrollo con distintos lenguajes de programación.
 
+<div style="text-align: center;">
+<img :src="$withBase('/img/eclipse.png')" alt="Figura 2. Eclipse">
+<p>Figura 2. Eclipse</p>
+</div>
+
 * **BlueJ** → es un entorno sencillo y didáctico para aprender java debido a su sencillez.
+
+<div style="text-align: center;">
+<img :src="$withBase('/img/bluej.png')" alt="Figura 3. BlueJ">
+<p>Figura 3. BlueJ</p>
+</div>
 
 * **jGRASP** → es un entorno que dispone de características de visualización de estructuras que puede resultar muy interesante.
 
+<div style="text-align: center;">
+<img :src="$withBase('/img/jgrasp.png')" alt="Figura 4. jGRASP">
+<p>Figura 4. jGRASP</p>
+</div>
+
 * **jEdit** → es un editor de texto general muy sencillo de usar que reconoce más de 130 lenguajes de programación.
+
+<div style="text-align: center;">
+<img :src="$withBase('/img/jEdit.png')" alt=" Figura 5. jEdit">
+<p> Figura 5. jEdit</p>
+</div>
 
 ## 1.7 ¿Qué es MySQL Workbench?
 

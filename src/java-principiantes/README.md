@@ -30,3 +30,7 @@ Este curso se desarrollará con el Framework  NetBeans IDE 8.0.2 y a su vez el J
 La estructuración de este no fue nada fácil, luego de arduas conversaciones se determinó planificar este curso por módulos que contendrán lo siguiente:
 
 <About-Module />
+
+::: warning
+    Tranbando 👷‍♂️
+:::
