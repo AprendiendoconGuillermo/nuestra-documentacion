@@ -50,13 +50,17 @@ module.exports = {
       },
       {
         title: "Java para principiantes desde cero en NetBeans",
-        collapsable: true,
+        collapsable: true,        
         children:[
           "/java-principiantes/",
           "/java-principiantes/modulo-01",
-          "/java-principiantes/modulo-02"
+          "/java-principiantes/modulo-02",
+          "/java-principiantes/modulo-03",
+          "/java-principiantes/modulo-04",
+          "/java-principiantes/modulo-05",
+          "/java-principiantes/modulo-06"        
         ]
-      }
+      }      
     ]
   },
 

@@ -1,4 +1,4 @@
-# Módulo I. Java, Instalación del IDE y MySQL Workbench 8.0. CE
+# 1. Módulo I. Java, Instalación del IDE y MySQL Workbench 8.0. CE
 
 ## 1.1 ¿Qué es Java?
 
