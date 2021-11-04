@@ -84,3 +84,42 @@ String variableString = “Aprendiendo con Guillermo”;
 :::warning
 **Cuidado:** los caracteres van siempre en comillas simples **`‘’`** ,mientras que las cadenas van siempre con comillas doble **`“”`**.
 :::
+
+Debemos tener cuidado al momento de asignar un carácter ya que existen caracteres especiales y se los puede ver en la Tabla 2.
+
+<div style="text-align:center;">
+<img :src="$withBase('/img/caracteres-especiales.png')" alt="Tabla 2. Sánchez Allende, J. Caracteres especiales en Java">
+<p>Tabla 2. Sánchez Allende, J. Caracteres especiales en Java</p>
+</div>
+
+
+## 4.2 Compuestos y agregados
+
+### 4.2.1 Compuestos
+
+Son los que se pueden dividir en subcampos que tengan significado. Zohonero Martínez, I., & Joyanes Aguilar, L. (2008.) nos da un ejemplo: Teléfono celular 51199110101; está compuesto por el código del país (51, Perú), el código del área (1, Lima) y el número celular. 
+
+### 4.2.2. Agregados
+
+Son tipos de datos cuyos valores constan de colecciones de elementos de datos, es decir, se componen de datos previamente definidos y existen tres tipos básicos: *arrays (arreglos), secuencias y registros.*
+
+#### 4.2.2.1. Arrays
+
+Son una colección de datos de tamaño o longitud fija y todos sus elementos deben ser del mismo tipo.  
+`array de enteros: [4 , 6 , 8]`
+
+#### 4.2.2.2. Secuencias
+
+Son arrays cuyo tamaño puede variar en tiempo de ejecución.  
+`Cadena = “Aprendiendo Java con Guillermo”`
+
+#### 4.2.2.3. Registros
+
+Puede contener elementos de datos agregados y primitivos; se puede considerar como un tipo o colección de datos tamaño fijo. Para acceder a sus campos se hace mediante identificadores.  
+`Registro { Dato1, Dato2, Dato3, ...}`
+
+## 4.3. Comprobación de avance
+
+La comprobación se llevará a cabo en una plantilla online donde deberá responder todas las preguntas y después de enviar se mostrará su puntuación. Solo hay una oportunidad.
+
+[Comprueba lo aprendido 🤓](https://forms.gle/MrRNmhWw2MLyBsWN8)
