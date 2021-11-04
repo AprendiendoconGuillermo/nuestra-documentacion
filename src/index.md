@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img :src="$withBase('/img/logo.png')" alt="logo">
+<img :src="$withBase('/img/logo.png')" alt="logo" width="400" height="400">
 
 </div>
 
