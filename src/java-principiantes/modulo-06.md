@@ -1,5 +1,9 @@
 # 6. Módulo VI. Modificadores de Acceso
 
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WZ79gKx-afA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 Ayudan a restringir el acceso a los datos que conforman un objeto, es decir, que permiten dar un nivel de seguridad para que otros objetos no puedan acceder a los datos otro objeto, en otras palabras, los modificadores de acceso abrazan el concepto de encapsulamiento.  
 
 Los modificadores de acceso se dividen en:

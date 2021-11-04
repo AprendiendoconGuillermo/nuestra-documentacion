@@ -1,5 +1,9 @@
 # 1. Módulo I. Java, Instalación del IDE y MySQL Workbench 8.0. CE
 
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-EzXoY1Deg0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 ## 1.1 ¿Qué es Java?
 
 El lenguaje de programación Java fue desarrollado por Sun Microsystems; fue presentado al público en la segunda mitad del año 1995. Java es un lenguaje independiente lo que significa que una vez desarrollada alguna aplicación, esta se ejecutará en cualquier máquina sin tener que volver a ejecutarlo.

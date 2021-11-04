@@ -58,7 +58,15 @@ module.exports = {
           "/java-principiantes/modulo-03",
           "/java-principiantes/modulo-04",
           "/java-principiantes/modulo-05",
-          "/java-principiantes/modulo-06"        
+          "/java-principiantes/modulo-06",
+          "/java-principiantes/modulo-07",
+          "/java-principiantes/modulo-08",
+          "/java-principiantes/modulo-09",
+          "/java-principiantes/modulo-10",
+          "/java-principiantes/modulo-11",
+          "/java-principiantes/modulo-12",
+          "/java-principiantes/modulo-13",
+          "/java-principiantes/modulo-14",      
         ]
       }      
     ]

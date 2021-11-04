@@ -1,5 +1,9 @@
 # 4. Módulo IV. Tipos de Datos
 
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CajD_yD2bds" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 ## 4.1 Primitivos
 
 Representan un dato único y no se consideran objetos; y Java soporta 8 tipos de datos primitivos y son los que se indican en la Tabla 1.
@@ -93,7 +97,11 @@ Debemos tener cuidado al momento de asignar un carácter ya que existen caracter
 </div>
 
 
-## 4.2 Compuestos y agregados
+## 4.2 Compuestos y agregados  
+  
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1iNHcBiZgmg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ### 4.2.1 Compuestos
 
