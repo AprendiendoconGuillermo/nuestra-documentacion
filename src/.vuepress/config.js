@@ -37,8 +37,29 @@ module.exports = {
         link: '/',
       },
       {
+        text: 'facebook',
+        link: 'https://www.facebook.com/AprendiendoconGuillermo',
+      },
+      {
         text: 'Mi canal 📺',
         link: 'https://www.youtube.com/AprendiendoconGuillermo?sub_confirmation=1'
+      },
+      {
+        text: '📢 Mis cursos',
+        items:[
+          {
+            text: 'Java para principantes 🤓',
+            link: 'https://www.youtube.com/watch?v=bNKCKVVx3So&list=PLRoF0hqfyCW-lfoIQ3PD8NbRZyBfzKBXZ'
+          },
+          {
+            text: 'Subnetting 🔌',
+            link: 'https://www.youtube.com/watch?v=EsEVrjVxjX4&list=PLRoF0hqfyCW-Pyg01UJ3woDojSRWgKiRK'
+          },
+          {
+            text: 'Planificación de la CPU 💻',
+            link: 'https://www.youtube.com/watch?v=hooMs4Qnn84&list=PLRoF0hqfyCW9-VzxOWKO36qW5SQBE8dnJ'
+          }
+        ]        
       }
     ],
     sidebar: [
@@ -67,7 +88,8 @@ module.exports = {
           "/java-principiantes/modulo-11",
           "/java-principiantes/modulo-12",
           "/java-principiantes/modulo-13",
-          "/java-principiantes/modulo-14",      
+          "/java-principiantes/modulo-14",
+          "/java-principiantes/modulo-15"      
         ]
       }      
     ]

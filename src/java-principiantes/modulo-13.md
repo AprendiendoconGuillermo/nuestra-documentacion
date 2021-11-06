@@ -341,7 +341,109 @@ Tabla 6. Ejecución Ejemplo Estructura Repetitiva for
 
 ## 13.3. Estructuras de salto
 
-<div  style="text-align:center;">
-<h1>Trabajando 👷‍♂️...</h1>
-<img :src="$withBase('/img/working.gif')" width="500" height="500"/>
-</div>
+### 13.3.1. Sentencia break
+
+Break en español podemos adoptar los siguientes significados en programación: salto, salir, cortar, etc. 
+
+> Sánchez Allende, J. (2009) nos indica que “La sentencia  `break` se utiliza para determinar inmediatamente la ejecución de una estructura de repetición o de un `switch`. Una vez se ha ejecutado la sentencia `break`, la ejecución continúa tras la estructura de repetición o `switch` donde se ha ejecutado break” (p.97)
+
+En pocas palabras, break, termina la ejecución. 🤷‍♂️
+
+```java
+for (int i = 0; i < 10; i++) {
+    System.out.println(i);
+    if (i==5) {
+        break;
+    }
+}
+```
+### 13.3.2. Sentencia continue
+
+Esta sentencia es utilizada en las estructuras de repetición debido a que interrumpen las líneas de código que existan para seguir con la siguiente iteración del ciclo. 
+
+A continuación un ejemplo de Sánchez Allende, J. (2009) que muestra de acuerdo a una cadena de texto, sólo los caracteres:
+
+Al ejemplo le cambié la cadena 🤪.
+
+```java
+String texto = "Aprendiendo 23 con Guiller(%mo";
+for (char c : texto.toCharArray()) {
+    if (!Character.isLetter(c)) {
+        continue;
+    }
+    System.out.print(c);
+}
+```
+## 13.4. Manejo de Excepciones 
+
+Todo programa por más cuidadoso y minucioso que se sea al momento de programar existirán errores ya sean: desbordamiento de buffer, tipo de dato mal ingresado.
+
+Al producirse un error una Subclase es la que indica el problema y nos brinda mayor detalle si deseamos verla. Por otra parte todo error que ocurra detiene o hace caer el programa, sin embargo, podemos controlar los errores e indicar ya sea al programador o cliente el problema causado para que pueda solucionarlo, y el programa seguirá funcionando.
+
+La estructura para el manejo de excepciones es la siguiente: 
+
+```java
+try {
+  //código
+} catch ( Exception e) {
+  //código para la excepción
+} finally { 
+  //código
+}
+```
+
+En la parte del `catch()` dentro de los paréntesis se especifica el tipo de excepción a capturar y el `catch()` se puede repetir tantas excepciones queramos capturar, sin embargo la parte del `finally` es opcional y sólo puede aparecer una vez.
+
+A continuación algunas excepciones:
+
+* **EOFException**  
+Se lanza cuando se ha llegado al final de un archivo.
+
+* **FileNotFoundException**  
+Se lanza cuando el archivo requerido no se encuentra.
+
+* **ClassNotFoundException**  
+Se lanza cuando la clase requerida no se encuentra.
+
+* **NumberFormatException**  
+Esta excepción se lanza cuando el dato ingresado no es numérico.
+
+* **NullPointerException**  
+Se lanza cuando queremos acceder a un objeto y este no se encuentra.
+
+* **InputMismatchException**  
+Este error lo lanza el scanner cuando el token recuperado no es el indicado.
+
+* **ArrayIndexOutBoundException**   
+Se lanza cuando se ha querido acceder a una arreglo con un índice inapropiado.
+
+Todas esas excepciones pueden ser capturadas con la siguiente palabra reservada: `Exception`
+
+A continuación unos ejemplo:
+
+***Error de tipo InputMismatchException***
+
+```java
+Scanner scanner = new Scanner(System.in);
+int x;        
+System.out.println("Ingrese un valor entero");
+try {
+    x = scanner.nextInt();
+} catch (InputMismatchException ime) {
+    System.out.println(ime);
+}
+```
+Mismo error usando Exception
+
+```java
+Scanner scanner = new Scanner(System.in);
+int x;        
+System.out.println("Ingrese un valor entero");
+try {
+    x = scanner.nextInt();
+} catch (Exception e) {
+    System.out.println(e);
+}
+```
+
+Sabiendo ahora el uso de las excepciones podemos validar que el dato ingresado por el usuario sea el deseado. 🤓
