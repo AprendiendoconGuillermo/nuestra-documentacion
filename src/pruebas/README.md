@@ -1,2 +1,2 @@
-# Probando consumo de API
+# Probando consumo de API en VuePress
 <pruebas-axios />

@@ -28,9 +28,11 @@ Si entras a la url aparecerá la siguiente información en forma json:
 
 ## Ejemplo
 
-En la carpeta **components** crearás un archivo **.vue** con el nombre que desees, para esta práctica se le dió el nombre de **axios.vue**.
+En la carpeta **components** crearás un archivo **.vue** con el nombre que desees, para esta práctica se le dió el nombre de **axios.vue** .
 
 Y dentro pondrás lo siguiente:
+
+`Estoy consumiendo un Get`
 
 ```vue
 <template>
@@ -100,3 +102,5 @@ import axios from 'axios';
   }
 </script>
 ```
+
+[Dame click para ver el consumo de la api](/pruebas)

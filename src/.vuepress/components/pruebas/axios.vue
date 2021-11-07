@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="display: flex;  justify-content: center;">
     <table class="table">
       <thead>
           <tr>
