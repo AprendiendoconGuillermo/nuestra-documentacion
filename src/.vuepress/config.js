@@ -104,7 +104,8 @@ module.exports = {
         title: "Pruebas",
         collapsable: true,
         children:[
-          "/pruebas/"
+          "/pruebas/",
+          "/pruebas/eat-api"
         ] 
       }     
     ]
