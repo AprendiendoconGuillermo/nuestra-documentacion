@@ -92,7 +92,14 @@ module.exports = {
           "/java-principiantes/modulo-14",
           "/java-principiantes/modulo-15"      
         ]
-      }      
+      },
+      {
+        title: "Pruebas",
+        collapsable: true,
+        children:[
+          "/pruebas/"
+        ] 
+      }     
     ]
   },
 
