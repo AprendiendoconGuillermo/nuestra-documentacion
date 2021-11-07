@@ -94,6 +94,13 @@ module.exports = {
         ]
       },
       {
+        title: "Consumir Api en VuePress",
+        collapsable: true,
+        children:[
+          "/consumir-api/"
+        ] 
+      },
+      {
         title: "Pruebas",
         collapsable: true,
         children:[
