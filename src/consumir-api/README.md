@@ -103,4 +103,4 @@ import axios from 'axios';
 </script>
 ```
 
-[Dame click para ver el consumo de la api](/pruebas/eat-api)
+[Dame click para ver el consumo de la api](/nuestra-documentacion/pruebas/eat-api)
