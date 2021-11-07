@@ -30,10 +30,11 @@ module.exports = {
   themeConfig: {
     editLinks: false,
     editLinkText: '',
-    lastUpdated: false,   
+    lastUpdated: false,
     nav: [
       {
         text: 'Inicio',
+        icon: 'home',
         link: '/',
       },
       {
