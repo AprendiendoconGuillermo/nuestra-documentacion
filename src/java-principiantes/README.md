@@ -3,6 +3,7 @@
 <div style="text-align:center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bNKCKVVx3So" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
+
 ## ¿A quién va dirigido el curso?
 
 Este curso va dirigido para todo aquel que quiere sumergirse en este lenguaje de programación orientada a objetos, no importa si tienes mucha, poca o nada de experiencia; lo importante es que tengas las ganas y el ánimo de aprender.
@@ -34,6 +35,7 @@ La estructuración de este no fue nada fácil, luego de arduas conversaciones se
 
 <About-Module />
 
-::: warning
-    Tranbando 👷‍♂️
-:::
+<div  style="text-align:center;">
+<h1>Trabajando 👷‍♂️...</h1>
+<img :src="$withBase('/img/working.gif')" width="500" height="500"/>
+</div>

@@ -1,5 +1,9 @@
 # 13. Módulo XIII. Estructuras de Control
 
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G5CT_67olAc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 Controlan el flujo de ejecución de un programa ejecutándose ya sea de manera secuencial, es decir, una línea tras otra; repitiendo bloques de código o saltándose bloques de código dependiendo si cumple o no la condición. Y estas estructuras de control se pueden clasificar en:
 
 | - |  -
@@ -18,6 +22,10 @@ Estas estructuras pueden anidarse siempre que sea el caso y no hay limitación e
 ### 13.1.1. Estructuras de Selección
 
 #### 13.1.1.1. Estructura if
+
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/90kmLZ38BG4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 La estructura `if` valida y ejecuta una única sentencia según se cumpla o no la condición.
 
@@ -47,6 +55,10 @@ En la Figura 41. Observamos el diagrama de flujo en la que ejecuta un único blo
 </div>
 
 #### 13.1.1.2. Estructura if-else
+
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v8iNbD3CGwQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 La estructura `if-else` valida y ejecuta una dos sentencia ya sea que se cumpla o no la condición.
 
@@ -83,6 +95,10 @@ En la Figura 42. Observamos el diagrama de flujo en la que ejecuta dos bloques d
 
 #### 13.1.1.3. Operador Condicional o Ternario
 
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5mchxpTYR-0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 Este operador resume la estructura if-else. Este operador requiere de tres operandos:
 * El primero corresponde a la condición,
 * El segundo corresponde al valor que tomará si la condición se cumple, y
@@ -102,6 +118,10 @@ int resultado = 5 > 2 ? 5+2 : 5-2;
 
 
 #### 13.1.1.4. Estructura if-else anidadas
+  
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t9TG5RxNFGo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 Las estructuras anidadas se utilizan cuando se deben evaluar bloques de instrucciones dentro de bloques de instrucciones independientemente si se cumple o no la condición y puede se puede utilizar cualquier estructura vista. 
 > Prieto Saez, N. y Casanova Faus, A. (2016) indica que estas estructuras “se las considera como una sola estructura con varias posibilidades de ejecución” (p.164)
@@ -150,6 +170,10 @@ En la Figura 43. Observamos el diagrama de flujo en la que ejecuta dos bloques d
 </div>
 
 ### 13.1.2. Estructura switch
+
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EuUt0K30Brg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 Es muy utilizada en la elaboración de menús debido a que permite seleccionar un caso entre múltiples casos. Se parece un poco a la estructura anidada if-else, sin embargo, es más eficiente y ahorra línea de código.
 
@@ -206,6 +230,10 @@ En la Figura 44. Observamos el diagrama de flujo en la cual dependiendo del valo
 
 ## 13.2. Estructuras Repetitivas
 
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CmryWAseIlQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 Estas estructuras también son llamadas como bucles, ciclos, iteraciones, y permiten repetir un número determinado de veces un bloque de código y tenemos la siguientes estructuras repetitivas:
 
 |  -    | -
@@ -215,6 +243,10 @@ Estas estructuras también son llamadas como bucles, ciclos, iteraciones, y perm
 | **for**          | se ejecuta un número determinado de veces
 
 ### 13.2.1. Estructura while
+
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s2cvot63ZTA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 Esta estructura ejecuta un bloque de instrucciones siempre que la condición `aritmética-lógica` cumpla el valor booleano establecido `(true o false)`, caso contrario no entra al `bucle` y sigue con el flujo normal del programa.
 
@@ -254,6 +286,10 @@ Tabla 4. Ejecución Ejemplo Estructura Repetitiva while
 </div>
 
 ### 13.2.2. Estructura do-while
+
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VSXtpc8s9os" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 Esta estructura ejecuta primero el bloque de instrucciones y luego evalúa la condición y si se cumple vuelve a iterar, es por esto que se dice que esta estructura itera como mínimo una vez y en la Figura 46 lo podemos ver.
 
@@ -296,6 +332,10 @@ Tabla 5. Ejecución Ejemplo Estructura Repetitiva do-while
 </div>
 
 ### 13.2.3. Estructura for
+
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aG9sua_fVgc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 Esta estructura tiene un parecido con la estructura `while` debido que se ejecuta siempre que la condición se cumpla, sin embargo, la diferencia está en la cantidad de interacciones. La estructura `while` itera infinitamente hasta que la condición cambie su estado verdad, no obstante, la estructura `for` itera un número determinado, es decir, sus ciclos son finitos. Se puede entender mejor viendo la Figura. 47.
 

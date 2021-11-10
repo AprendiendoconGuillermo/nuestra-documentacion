@@ -27,19 +27,3 @@ Estos métodos los encontramos dentro de la clase ***Scanner*** ubicada en el pa
 <img :src="$withBase('/img/ejemplo-24.png')" alt="Figura 40. Método para Solicitar Datos al Usuario"/>
 <p>Figura 40. Método para Solicitar Datos al Usuario</p>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-<div  style="text-align:center;">
-<h1>Trabajando 👷‍♂️...</h1>
-<img :src="$withBase('/img/working.gif')" width="500" height="500"/>
-</div>

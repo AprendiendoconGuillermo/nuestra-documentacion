@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img :src="$withBase('/img/logo.png')" alt="logo" width="400" height="400">
+[<img :src="$withBase('/img/logo.png')" alt="logo" width="400" height="400">](https://www.youtube.com/AprendiendoconGuillermo?sub_confirmation=1)
 
 </div>
 
