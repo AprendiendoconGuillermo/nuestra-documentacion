@@ -1,20 +1,9 @@
 module.exports = {
   dest: 'docs',
   base: '/nuestra-documentacion/',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
   title: 'Aprendiendo con Guillermo 🤓',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
   description: "Documentacion de mis cursos",
 
-  /**
-   * Extra tags to be injected to the page HTML `<head>`
-   *
-   * ref：https://v1.vuepress.vuejs.org/config/#head
-   */
   head: [
     ['link', { rel: 'icon', href: '/img/logo.png' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
@@ -22,11 +11,6 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
 
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
   themeConfig: {
     editLinks: false,
     editLinkText: '',
@@ -90,7 +74,16 @@ module.exports = {
           "/java-principiantes/modulo-12",
           "/java-principiantes/modulo-13",
           "/java-principiantes/modulo-14",
-          "/java-principiantes/modulo-15"      
+          "/java-principiantes/modulo-15",      
+          "/java-principiantes/modulo-16"      
+        ]
+      },
+      {
+        title: "Api Rest",
+        collapsable: true,
+        children:[
+          "/api-rest-nodejs-express-mongodb/",          
+          "/api-rest-nodejs-express-mongodb/spring-boot-mysql.md"          
         ]
       },
       {
@@ -103,10 +96,11 @@ module.exports = {
       {
         title: "Pruebas",
         collapsable: true,
-        children:[
+        children: [
           "/pruebas/",
-          "/pruebas/eat-api"
-        ] 
+          "/pruebas/eat-api",
+          "/pruebas/test-api-nodejs",
+        ]         
       }     
     ]
   },
