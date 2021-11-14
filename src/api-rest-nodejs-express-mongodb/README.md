@@ -637,7 +637,11 @@ function guardar(req, res){
             repository.guardar(req)
             .then(doc => {
                 // exception de creación
-                exception.success(res, "Datos ingresados");
+                onst token = {
+                    "token": t.createToken(doc)
+                }
+                // enviamos el token
+                exception.success(res, "Datos ingresados",token);
             })
             .catch(err => {
                 // exception si hubo algo inesperado con la solicitud
@@ -670,7 +674,199 @@ console.log(passOriginal.toString(CryptoJS.enc.Utf8));//salida => Ecuador2021
 
 ## 6. Dale seguridad a tu Api con JWT 
 
-<div  style="text-align:center;">
-<h1>Trabajando 👷‍♂️...</h1>
-<img :src="$withBase('/gif/working.gif')" width="500" height="500"/>
+Para darle seguridad a nuestra api usaremos [`jwt`](https://jwt.io/) y se compone de tres partes:
+
+1. Header o cabecera  
+2. Payload o carga útil  
+3. Signature  
+
+**Primero** que tenemos que hacer es instalar la dependencia [`jwt-simple`](https://openbase.com/js/jwt-simple), y [`dayjs`](https://www.npmjs.com/package/dayjs) de igual manera, puedes usar la que mejor te parezca
+
+```sh
+npm install jwt-simple
+npm install dayjs
+```
+[`Ver documentación de dayjs`](https://day.js.org/docs/en/display/format)
+
+**Segundo** es determinar la clave que se usará para cifrar tu token, recuerda que mientras más extensa, más segura será.
+
+```js
+/**
+ * BD: mongodb 
+ * user: aprendiendo
+ * pass: 123456
+ * server: localhost
+ * port: 27017
+ * bd: pruebas
+ */
+ module.exports = {
+    port : process.env.PORT || 3000, //puerto que escuchará nuestra aplicación
+    mongodb : process.env.MONGODB || 'mongodb://aprendiendo:123456@localhost:27017/proyecto',
+    secretKey : process.env.SECRET_KEY || 'Aprendiendo-con-Guillermo',
+    secretToken : process.env.SECRET_TOKEN || '@pr3nd13nd0c0nGu1ll3rm@'
+}
+```
+
+**Tercero** será  reestructurar nuestro proyecto de la siguiente forma:
+
+<div style="text-align:center;">
+<img :src="$withBase('/img/api-nodejs/30.png')" alt="Creació de la carpeta">
 </div>
+
+**Cuarto** será crear y descodificar nuestro token, para esto nos iremos a `tokenService.js` y escribiremos los siguiente:
+
+```js
+// importaciones
+const jwt = require('jwt-simple');
+const Day = require('dayjs');
+const server = require('../../config/server.js');
+
+// creación del token
+const createToken = (doc) => {  
+    // creamos el payload de nuestro token
+    const payload = {
+        // información del token
+        sub: doc._id, // no se recomienda colocar el id, pero es un ejemplo
+        // creacion token
+        iat: Day().unix(),
+        // expirar token
+        p: Day().add(1, 'm').unix() // m -> minuto <- por ejemplo
+    }
+    /** Podemos usar
+     *  HS256
+     *  HS384
+     *  HS512
+     */
+    return jwt.encode(payload, server.secretToken, 'HS256');
+}
+
+// decodificación del token
+const decodeToken = (token) => {
+    // creamos una promesa
+    const decode = new Promise((res, err) => {
+        try{            
+            // decoficamos el token
+            const payload = jwt.decode(token, server.secretToken, 'HS256');
+            // verificamos si no ha expirado
+            if(payload.exp <= Day().unix())
+                err({
+                    message: 'Su sesión ha expirado'
+                })
+            // devolvemos algo de ser necesario, para indicar que todo está correcto
+            res(payload._id)                             
+        }catch(e){
+            // en caso de que el token no se pueda decodificar
+            err({
+                message: 'Tokén inválido'
+            })
+        }
+    })
+    return decode;
+}
+```
+
+**Quinto** en el archivo `authorization.js` importaremos a nuestro servicio de token para determinar y dar acceso al recurso solicitado si este tiene permiso, caso contrario le mandamos una excepción (debes agregarla 😉)
+
+```js
+// importamos
+const exception = require('../exception/exception.js');
+const tokenService = require('../service/token/tokenService.js');
+// creamos el método que recibe el requerimiento, el result y el next para dar paso al recurso
+const authorization = (req, res, next) => { 
+    /** este if es para hacer público nuestro endpoint http://localhost:3000/api/add    
+     *  puedes usar un arreglo, si deseas liberar más enpoint
+     */ 
+    if(req.path.replace ('/', '') == 'add')
+        next(); // continua con el recurso solicitado
+    else{
+        // verificamos si la solicitud tiene un token
+        if(!req.headers.authorization){
+            // muestra una excepción
+            exception.forbidden(res, "No tiene permiso");
+        }else{              
+            // obtenemos el token
+            const token = req.headers.authorization;            
+            // llamamos al método que decofica el token
+            tokenService.decodeToken(token)
+            .then(res => {        
+                next() // continua con el recurso solicitado
+            })
+            .catch(err => {
+                // muestra una excepción ya sea por token inválido o sesión expirada
+                exception.unauthorized(res, err.message);
+            })
+        }
+    }
+}
+// exportamos
+module.exports = authorization;
+```
+
+**Sexto** debemos enviarle el token al cliente para que este lo almacene y nos lo envíe en cada solicitud, para esto debemos hacer un pequeño cambio en nuestro `personService.js` y quedaría de la siguiente manera.
+
+```js
+// importamos nuestro token
+const token = require('../services/token/token.js');
+// dentro del then invocamos nuestro servicio
+.then(doc => {
+    // guardamos nuestro token
+    const token = {
+        "token": tokenService.createToken(doc)
+    }
+    // exception de creación y enviamos el token
+    exception.success(res, "Datos ingresados",token);
+})
+```
+
+**Septimo**, ahora solo queda implementar nuestro middleware, y ¿dónde lo implementamos 🤔?, puedes ya sea en `personRoute.js` o en `app.js`.
+
+Pensemos, si colocamos en `personRoute.js`, tenemos que colocar nuestro *middleware* en cada endpoint, sin embargo, si lo colocamos en `app.js` basta con colocarlo despúes del nuestro de nuestra api, de todos modos ten las dos formas.
+
+`personRoute.js`
+```js
+// importamos express
+const express = require('express');
+// hacemos uso de la función Router()
+const api = express.Router();
+// importamos nuestro controlador
+const personCroller = require('../controller/personController.js');
+// importamos nuestro middleware
+const authorization = require('../middleware/authorization.js');
+// hacemos uso de los métodos http
+api.post('/add', authorization, personCroller.insert);
+api.get('/select', authorization, personCroller.select);
+api.put('/update/:id/' , authorization,  personCroller.update);
+api.delete('/delete/:id', authorization, personCroller.borrar);
+
+// exportamos api
+module.exports = api;
+```
+
+`app.js`
+```js
+// importamos express
+const express = require('express');
+// importamos body-parser
+const bodyParser = require('body-parser');
+// llamanos al función
+const app = express();
+// importamos nuestro archivo que contiene las rutas o endpoints de persona
+const api = require('../route/personRoute.js');
+// importamos nuestro middleware
+const authorization = require('../middleware/authorization.js');
+
+// hacemos uso de body-parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+// hacemos uso de nuestra ruta de persona
+app.use('/api', authorization, api);
+/* si tuvieramos más rutas de otras collections haríamos todo como se hiso con persona
+ * y aquí haríamos udo de la ruta por ejemplo
+ * app.use('/api', api2);
+ */
+// exportamos app para llamarlo en nuestro archivo app.js que está en la raíz de nuestro proyecto
+module.exports = app;
+```
+[Dame click para ver la ejecución implemtando app.js](/nuestra-documentacion/pruebas/test-api-nodejs)  
+[Dame click para descargar el proyecto](http://fumacrom.com/2tqLt)

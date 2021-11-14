@@ -72,3 +72,29 @@
 <div style="text-align:center;">
 <img :src="$withBase('/img/api-nodejs/29.png')" alt="Creació de la carpeta">
 </div>
+
+## JWT
+
+* Creación del token
+
+<div style="text-align:center;">
+<img :src="$withBase('/img/api-nodejs/31.png')" alt="Creació de la carpeta">
+</div>
+
+* Token inválido
+
+<div style="text-align:center;">
+<img :src="$withBase('/img/api-nodejs/32.png')" alt="Creació de la carpeta">
+</div>
+
+* Sesión expirada
+
+<div style="text-align:center;">
+<img :src="$withBase('/img/api-nodejs/33.png')" alt="Creació de la carpeta">
+</div>
+
+* Permiso concedido
+
+<div style="text-align:center;">
+<img :src="$withBase('/img/api-nodejs/34.png')" alt="Creació de la carpeta">
+</div>
