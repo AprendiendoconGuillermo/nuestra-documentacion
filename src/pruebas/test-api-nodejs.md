@@ -61,3 +61,14 @@
 <div style="text-align:center;">
 <img :src="$withBase('/img/api-nodejs/27.png')" alt="Creació de la carpeta">
 </div>
+
+## Crypto-js
+
+* Encriptar
+
+<div style="text-align:center;">
+<img :src="$withBase('/img/api-nodejs/28.png')" alt="Creació de la carpeta">
+</div>
+<div style="text-align:center;">
+<img :src="$withBase('/img/api-nodejs/29.png')" alt="Creació de la carpeta">
+</div>

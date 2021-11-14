@@ -82,7 +82,7 @@ module.exports = {
         title: "Api Rest",
         collapsable: true,
         children:[
-          "/api-rest-nodejs-express-mongodb/",          
+          "/api-rest-nodejs-express-mongodb/",
           "/api-rest-nodejs-express-mongodb/spring-boot-mysql.md"          
         ]
       },
@@ -99,7 +99,7 @@ module.exports = {
         children: [
           "/pruebas/",
           "/pruebas/eat-api",
-          "/pruebas/test-api-nodejs",
+          "/pruebas/test-api-nodejs"          
         ]         
       }     
     ]

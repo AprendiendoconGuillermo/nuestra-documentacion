@@ -381,6 +381,10 @@ Tabla 6. Ejecución Ejemplo Estructura Repetitiva for
 
 ## 13.3. Estructuras de salto
 
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LJC5NoGbzUU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 ### 13.3.1. Sentencia break
 
 Break en español podemos adoptar los siguientes significados en programación: salto, salir, cortar, etc. 

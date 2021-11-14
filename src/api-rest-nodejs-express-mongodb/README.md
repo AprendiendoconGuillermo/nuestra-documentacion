@@ -540,3 +540,137 @@ Proyecto terminado
 
 [Dame click para ver la ejecución](/nuestra-documentacion/pruebas/test-api-nodejs)  
 [Dame click para descargar el proyecto](http://fumacrom.com/2tqLt)
+
+## 5. Encripta la contraseña de tu usuario
+
+Para esta práctica vale tener un `schema` que haga referencia a `usuarios`, sin embargo por motivo de práctica, aumentaremos un campo `pass` al schema `person` y quedaría de la siguiente forma:
+
+```js
+// importamos mongoose para poder hacer uso del schema
+const mongoose = require('mongoose');
+// creamos nuestro esquema
+const collectionPerson = mongoose.Schema({
+    name: String,
+    city: String,
+    pass: String
+})
+// creamos una constante de nuestro modelo para poderlo exportar
+const Person = mongoose.model('Person', collectionPerson);
+// exportamos nuestro esquema
+module.exports = Person;
+```
+De igual manera debemos validar que al ingresar una documento, este campo esté lleno y el cambio quedaría de la siguiente forma:
+
+```js
+function guardar(req, res){  
+    try {                
+        if(req.body.name == "" || req.body.name == null || 
+           req.body.city == "" || req.body.city == null || 
+           req.body.pass == "" || req.body.pass == null)
+            // exception si los datos no son los esperados
+           exception.badRequest(res, "Ingrese los datos");            
+        else{
+            repository.guardar(req)
+            .then(doc => {
+                // exception de creación
+                exception.success(res, "Datos ingresados");
+            })
+            .catch(err => {
+                // exception si hubo algo inesperado con la solicitud
+                exception.badRequest(res, err);
+            });
+        }            
+    } catch (error) {
+        // exception interna del programa
+        exception.internalError(res, "Problema inesperado");
+    }
+}
+```
+
+Teniendo listo los cambios, ahora debemos elegir una dependencia que cumpla con la encriptación, hay varias, sos libre de elegir la que mejor te parezca, y bueno yo he instalado la siguiente [`cripto-js`](https://cryptojs.gitbook.io/docs/)
+
+```sh
+npm install crypto-js
+```
+
+Ahora solo queda encriptar la contraseña, ¿Pero cómo 🤔?. Presta atención
+
+```js
+// importamos 
+const CryptoJS = require("crypto-js");
+// nuestra contraseña
+const pass = "123456";
+// nuestra palabra clave de encriptación
+const secretKey = "Aprendiendo";
+// encriptar
+const passCrypto = CryptoJS.AES.encrypt(pass, secretKey).toString();
+// mostrar
+console.log(passCrypto);//salida => U2FsdGVkX18jpRlY5yNjiuyBSdbjPo3EjzaGBsdiEa4=
+```
+
+Viste?, súper fácil, ahora solo basta acomodar eso en el servicio y listo.
+
+:::tip
+Configura tu secretKey en config
+:::
+
+```js
+// importamos nuestro repositorio
+const repository = require('../repository/personRepository.js');
+// importamos nuestras excepciones
+const exception = require('../exception/exception.js');
+// importamos config
+const server = require('../config/server.js');
+// importamos
+const CryptoJS = require("crypto-js");
+
+// esta función recibe el requerimiento (body) y respuesta (http)
+function guardar(req, res){  
+    try {                
+        if(req.body.name == "" || req.body.name == null || 
+           req.body.city == "" || req.body.city == null || 
+           req.body.pass == "" || req.body.pass == null)
+            // exception si los datos no son los esperados
+           exception.badRequest(res, "Ingrese los datos");            
+        else{
+            req.body.pass =  CryptoJS.AES.encrypt(req.body.pass, server.secretKey).toString();
+            repository.guardar(req)
+            .then(doc => {
+                // exception de creación
+                exception.success(res, "Datos ingresados");
+            })
+            .catch(err => {
+                // exception si hubo algo inesperado con la solicitud
+                exception.badRequest(res, err);
+            });
+        }            
+    } catch (error) {
+        // exception interna del programa
+        exception.internalError(res, "Problema inesperado");
+    }
+}
+```
+[Dame click para ver la encriptación](/nuestra-documentacion/pruebas/test-api-nodejs)
+
+
+## 7. Desencripta la contraseña de tu usuario
+
+Esto super sencillo, basta con una línea, te daré la línea pero es tu deber saber donde lo colocas, te mostraré la ejecución con un `console.log();` descriptando la contraseña del paso 6 que es `Ecuado2021`.
+
+```js
+// consultamos de nuestra base la contraseña encriptada
+const passCryto = "U2FsdGVkX1/rxCuneD4XFDTkILTnTa0xx0HfJUPtURQ="; //la puedes ver en la clave en Pruebas
+// nuestra palabra clase de desencriptación
+const secretKey = "Aprendiendo-con-Guillermo"; // esta clave está en mi config, recuerda hacer ese cambio
+// desencriptar
+const passOriginal = CryptoJS.AES.decrypt(passCryto, secretKey);
+// mostrar
+console.log(passOriginal.toString(CryptoJS.enc.Utf8));//salida => Ecuador2021
+```
+
+## 6. Dale seguridad a tu Api con JWT 
+
+<div  style="text-align:center;">
+<h1>Trabajando 👷‍♂️...</h1>
+<img :src="$withBase('/gif/working.gif')" width="500" height="500"/>
+</div>
