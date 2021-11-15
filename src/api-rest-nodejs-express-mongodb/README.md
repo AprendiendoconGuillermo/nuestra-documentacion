@@ -240,12 +240,12 @@ module.exports = {
 // importamos mongoose para poder hacer uso del schema
 const mongoose = require('mongoose');
 // creamos nuestro esquema
-const collectionPerson = mongoose.Schema({
+const Person = mongoose.Schema({
     name: String,
     city: String
 })
 // creamos una constante de nuestro modelo para poderlo exportar
-const Person = mongoose.model('Person', collectionPerson);
+const Person = mongoose.model('Person', collectionPerson, 'Person');
 // exportamos nuestro esquema
 module.exports = Person;
 ```
