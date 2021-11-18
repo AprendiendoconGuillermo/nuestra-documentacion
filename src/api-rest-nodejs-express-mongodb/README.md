@@ -1,5 +1,5 @@
 # Node js Express con MongoDB
-
+<bottom-like />
 :::warning
 * Debe tener instalado [Node.js](https://nodejs.org/en/)
 * Debe tener instalado [MongoDB](https://www.mongodb.com/try/download/community) y tener ya un usuario y base creada [click para la documentación](https://docs.mongodb.com/manual/tutorial/getting-started/)

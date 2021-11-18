@@ -1,22 +1,22 @@
 <template>
-  <div style="display: flex;  justify-content: center;">
-    <table class="table">
-      <thead>
-          <tr>
-              <th>code</th>
-              <th>symbol</th>
-              <th>rate</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr  v-for="(item, index) in info" :key="index">
-              <td>{{item.code}}</td>
-              <td>{{item.symbol}}</td>
-              <td>{{item.rate}}</td>
-          </tr>
-      </tbody>
-    </table>
-  </div>
+<div>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">Syboml</th>
+        <th scope="col">Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="(item, index) in info" :key="index">        
+        <td>{{item.code}}</td>
+        <td>{{item.symbol}}</td>
+        <td>{{item.rate}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 
 <script>
