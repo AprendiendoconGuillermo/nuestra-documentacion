@@ -12,5 +12,5 @@
 * Estructuras condicionales y repetitivas,
 * Y manejo de excepciones
 
-En la siguiente serie de JAVA se viene ya el manejo de Objetos o [POO](/nuestra-documentacion/java-poo)  
+En la siguiente serie de JAVA se viene ya el manejo de Objetos o [POO](/java-poo)  
 
