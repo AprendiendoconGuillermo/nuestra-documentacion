@@ -79,6 +79,13 @@ module.exports = {
         ]
       },
       {
+        title: "Java-Progrmación Orientada a Objetos (POO)",
+        collapsable: true,        
+        children:[
+          "/java-poo/",
+        ]
+      },
+      {
         title: "Api Rest",
         collapsable: true,
         children:[
