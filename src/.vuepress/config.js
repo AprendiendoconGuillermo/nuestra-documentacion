@@ -82,7 +82,7 @@ module.exports = {
         title: "Java-Progrmación Orientada a Objetos (POO)",
         collapsable: true,        
         children:[
-          "/java-poo/",
+          "/java-poo/modulo-01",
         ]
       },
       {
