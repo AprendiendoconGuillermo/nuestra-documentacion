@@ -4,7 +4,7 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CajD_yD2bds" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-## 4.1 Primitivos
+## 4.1. Primitivos
 
 Representan un dato único y no se consideran objetos; y Java soporta 8 tipos de datos primitivos y son los que se indican en la Tabla 1.
 
@@ -97,13 +97,13 @@ Debemos tener cuidado al momento de asignar un carácter ya que existen caracter
 </div>
 
 
-## 4.2 Compuestos y agregados  
+## 4.2. Compuestos y agregados  
   
 <div style="text-align:center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1iNHcBiZgmg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-### 4.2.1 Compuestos
+### 4.2.1. Compuestos
 
 Son los que se pueden dividir en subcampos que tengan significado. Zohonero Martínez, I., & Joyanes Aguilar, L. (2008.) nos da un ejemplo: Teléfono celular 51199110101; está compuesto por el código del país (51, Perú), el código del área (1, Lima) y el número celular. 
 

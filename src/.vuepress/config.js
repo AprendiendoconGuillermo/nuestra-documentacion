@@ -82,15 +82,18 @@ module.exports = {
         title: "Java-Progrmación Orientada a Objetos (POO)",
         collapsable: true,        
         children:[
+          "/java-poo/sobre-curso",
           "/java-poo/modulo-01",
+          "/java-poo/modulo-02",
+          "/java-poo/modulo-03",
         ]
       },
       {
         title: "Api Rest",
         collapsable: true,
         children:[
-          "/api-rest-nodejs-express-mongodb/",
-          "/api-rest-nodejs-express-mongodb/spring-boot-mysql.md"          
+          "/api-rest/",
+          "/api-rest/spring-boot-mysql.md"          
         ]
       },
       {

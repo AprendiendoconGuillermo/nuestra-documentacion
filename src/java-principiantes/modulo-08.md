@@ -17,7 +17,7 @@ Entran ceros por la derecha.
 <p>Figura 33. Ejemplo Desplazamiento a la izquierda <<</p>
 </div>
 
-### 8.1.2 Desplazamiento a la derecha (>>)
+### 8.1.2. Desplazamiento a la derecha (>>)
 
 Entran ceros por la izquierda
 

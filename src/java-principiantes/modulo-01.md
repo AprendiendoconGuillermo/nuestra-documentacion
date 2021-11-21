@@ -4,7 +4,7 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-EzXoY1Deg0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-## 1.1 ¿Qué es Java?
+## 1.1. ¿Qué es Java?
 
 El lenguaje de programación Java fue desarrollado por Sun Microsystems; fue presentado al público en la segunda mitad del año 1995. Java es un lenguaje independiente lo que significa que una vez desarrollada alguna aplicación, esta se ejecutará en cualquier máquina sin tener que volver a ejecutarlo.
 
@@ -14,7 +14,7 @@ Java corre en diversas plataformas con distintos Sistemas Operativos por ejemplo
 *¿Sabías que este lenguaje antes se llamaba Oak?*
 :::
 
-## 1.2 ¿Por qué aprenderlo?
+## 1.2. ¿Por qué aprenderlo?
 
 Si tienes una idea, un pensamiento o algo que quieras realizar, Java es uno de los lenguajes que puede servirte debido que está Orientado a Objeto, es decir, que todo puede ser considerado un objeto, sin embargo:
 
@@ -30,7 +30,7 @@ En el ámbito laboral, el conocimiento de este lenguaje es muy solicitado, posee
 *Si dominas java, tendrás muchas ofertas de trabajo y un buen salario.*
 :::
 
-## 1.3 Características
+## 1.3. Características
 
 Las características más relevantes de Java son:
 
@@ -41,7 +41,7 @@ Las características más relevantes de Java son:
 * **Multihilo** → mejora el rendimiento permitiendo la ejecución de varias acciones a la vez.
 * **Garbage Collector** → monitorea
 
-## 1.4 Funcionamiento
+## 1.4. Funcionamiento
 
 Java se diferencia de los demás lenguajes, este utiliza tanto un compilador que se encarga de crear el ejecutable, y un intérprete que genera el código máquina para pueda ser ejecutado en cualquier ordenador.
 
@@ -61,7 +61,7 @@ Cada dispositivo sin considerar su arquitectura poseen una Máquina Virtual Java
 <p>Figura 1. Ejecución Interna de programas en Java</p>
 </div>
 
-## 1.5 ¿Qué es NetBeans?
+## 1.5. ¿Qué es NetBeans?
 
 NetBeans indica que “Es un entorno de desarrollo de código abierto, una comunidad en constante crecimiento, una herramienta que permite a los programadores escribir, compilar, depurar y ejecutar programas. Está escrito en Java pero permite escribir en otro lenguajes de programación”
 
@@ -69,7 +69,7 @@ NetBeans indica que “Es un entorno de desarrollo de código abierto, una comun
 ¿Sabías que en las primeras computadoras se ingresaban las instrucciones moviendo interruptores?
 :::
 
-## 1.6 Alternativas para NetBeans
+## 1.6. Alternativas para NetBeans
 
 Otras herramientas que nos permiten trabajar con el lenguaje de programación Java son:
 
@@ -101,26 +101,26 @@ Otras herramientas que nos permiten trabajar con el lenguaje de programación Ja
 <p> Figura 5. jEdit</p>
 </div>
 
-## 1.7 ¿Qué es MySQL Workbench?
+## 1.7. ¿Qué es MySQL Workbench?
 
 Es una herramienta *open source* (código abierto), que permite el diseño, administración, gestión y mantenimiento de bases de datos MySQL. Está disponible en Windows, Linux y Mac OS.
 
-## 1.8 ¿Por qué utilizar MySQL Workbench?
+## 1.8. ¿Por qué utilizar MySQL Workbench?
 
 Su diseño amigable y de fácil uso lo convierte en el mejor gestor de base de datos para este curso, además, por ser open source puede ser utilizado para empezar un negocio.
 Proporciona una consola visual, editor de texto con colores; permite una fácil migración de base de datos y más.
 
-## 1.9 Instalación del JDK 8
+## 1.9. Instalación del JDK 8
 
 * [JDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 * [Instalación](https://www.youtube.com/watch?v=PAFUo4hpttE)
 
-## 1.10 Instalación del IDE
+## 1.10. Instalación del IDE
 
 * [IDE](https://netbeans.org/downloads/old/8.2/)
 * [Instalación](https://www.youtube.com/watch?v=PAFUo4hpttE)
 
-## 1.11 Instalación de MySQL Workbench 8.0 CE
+## 1.11. Instalación de MySQL Workbench 8.0 CE
 
 ::: warning
 pendiente

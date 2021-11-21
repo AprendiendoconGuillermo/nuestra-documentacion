@@ -1,6 +1,5 @@
-# Sobre el Curso
+# 1. Módulo I. ¿Qué es la programación orientada a objetos?
 
-<div  style="text-align:center;">
-<h1>Trabajando 👷‍♂️...</h1>
-<img :src="$withBase('/gif/working.gif')" width="500" height="500"/>
-</div>
+## 1.1. ¿Qué es una Clase?
+
+## 1.2. ¿Qué es un Objeto?

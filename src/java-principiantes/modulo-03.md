@@ -13,7 +13,7 @@ Son conjuntos de caracteres (letras y números) que le darán el nombre identifi
 **Cuidado:** Un identificador debe empezar con una letra y debe seguir una sucesión de letras y dígitos
 :::
 
-## 3.1 Nombres de variables y métodos
+## 3.1. Nombres de variables y métodos
 
 Son escritos en minúscula y si es un nombre compuesto, la segunda palabra empieza con mayúscula. Ejemplo: nombre, primerApellido, nombre1…
 
@@ -21,7 +21,7 @@ Son escritos en minúscula y si es un nombre compuesto, la segunda palabra empie
 **Advertencia:** no se usa el carácter subrayado o también llamado guión bajo  `_`
 :::
 
-## 3.2 Nombres de clases
+## 3.2. Nombres de clases
 
 Empiezan con mayúscula y el resto con minúscula, y si es un nombre compuesto, la segunda palabra empieza con mayúscula.  
 ***Ejemplo:** Aprendiendo, AprendiendoJava, CursoJavaDesde0...*
@@ -30,14 +30,14 @@ Empiezan con mayúscula y el resto con minúscula, y si es un nombre compuesto, 
 **Advertencia:** no se usa el carácter subrayado o también llamado guión bajo  `_`
 :::
 
-## 3.3 Nombres de constantes
+## 3.3. Nombres de constantes
 
 Son escritos completamente en mayúscula y si es un nombre compuesto se utiliza el carácter subrayado. Ejemplo: PI, TAMAÑO_MÁXIMO…
 
 >“Elegir nombres que se entiendan fácilmente es una de las reglas clave que facilitan la legibilidad”   
 >Sánchez Allende, J.
 
-## 3.4 Comprobación de avance
+## 3.4. Comprobación de avance
 
 La comprobación se llevará a cabo en una plantilla online donde deberá responder todas las preguntas y después de enviar se mostrará su puntuación. Solo hay una oportunidad.
 
