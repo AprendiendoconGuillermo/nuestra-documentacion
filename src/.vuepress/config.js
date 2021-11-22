@@ -52,7 +52,8 @@ module.exports = {
         title: "Hola 🤓",
         collapsable: true,
         children:[
-          "/"
+          "/",
+          "/cursos"
         ] 
       },
       {
@@ -79,7 +80,7 @@ module.exports = {
         ]
       },
       {
-        title: "Java-Progrmación Orientada a Objetos (POO)",
+        title: "Java-Programación Orientada a Objetos (POO)",
         collapsable: true,        
         children:[
           "/java-poo/sobre-curso",
@@ -89,7 +90,7 @@ module.exports = {
         ]
       },
       {
-        title: "Api Rest",
+        title: "Api-Rest",
         collapsable: true,
         children:[
           "/api-rest/",

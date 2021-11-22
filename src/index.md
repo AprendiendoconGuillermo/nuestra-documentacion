@@ -6,7 +6,7 @@
 
 </div>
 
-Hello, I introduce myself, my name is Guillermo, I'm Ecuadorian, studied engineering system computational four years. In this page you will learn all that I learned while studying in the university, step to step.
+Hola, me presento, mi nombre es Guillermo, soy ecuatoriano, estudié ingeniería en sistemas computacionales cuatro años. En esta página aprenderás todo lo que aprendí mientras estudiaba en la universidad, paso a paso.
 
 <About-Course />
 
@@ -18,3 +18,4 @@ Hello, I introduce myself, my name is Guillermo, I'm Ecuadorian, studied enginee
 * Ing. Adoni
 * Ing. Pin Andrea
 * Ing. Zambrano Joselyn
+
