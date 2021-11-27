@@ -58,7 +58,16 @@ Los objetos que se crean, deben de alguna forma o manera interactuar entre sí, 
 Antes de nombrear a los atributos y métodos recuerda los [identificadores](/nuestra-documentacion/java-principiantes/modulo-03)
 ::: 
 
-## 1.1.2. ¿Cómo se grafica una clase?
+## 1.1.2. Tipos de clases
+
+Prieto et al., distingue tres tipos básicos y son:
+
+* **Clase Tipo de Dato**: define los elementos que componen. 
+* **Clase Programa**: inicia la ejecución del código.
+* **Clase de Utilidades**: repositorio de operaciones.
+
+
+## 1.1.3. ¿Cómo se grafica una clase?
 
 Las clases se grafican mediante un rectángulo de forma vertical el cual tiene `3 secciones`:
 
@@ -87,7 +96,7 @@ Que nos quieren decir estos dos autores, que un atributo es una característica 
 
 Otro ejemplo sería el color de ojos, tú tienes ojos verdes y la chica que te gusta tiene ojos azules, el atributo sería `colorOjos: verdes` o `colorOjos: azul`
 
-Estos atributos tienen valores, por lo tanto estos valores deben obligatoriamente tener un tipo de dato, debido que `java` es fuertemente tipado. A su vez, estos atributos pueden o no tener [modificadores de acceso](/nuestra-documentacion/java-principiantes/modulo-06)
+Estos atributos tienen valores, por lo tanto estos valores deben obligatoriamente tener un tipo de dato, debido que `java` es `fuertemente tipado`. A su vez, estos atributos pueden o no tener [modificadores de acceso](/nuestra-documentacion/java-principiantes/modulo-06), sin embargo, por buenas prácticas se los declara como `private`.
 
 Cómo se vería esto en la práctica.
 
@@ -154,13 +163,63 @@ class Persona{
 ```
 ## 1.3. ¿Qué es una instancia?
 
+Una instancia es el término utilizado para la creación de objetos.
+
+**Entonces, ¿es un término que me indica que se ha creado un objeto? 🤔**
+
 ## 1.4. ¿Qué es un Objeto?
+
+> Prieto et al.,   
+Un objeto se puede definir como una agrupación o colección de datos y operaciones que poseen determinada estructura y mediante los cuales se modelan aspectos relevantes de un problema.
+
+Observemos el siguiente ejemplo:
+```java
+/**
+ * Clase -> Persona
+ * Variable -> persona
+ * instancia -> new Persona()
+ */
+
+Persona persona = new Persona();
+
+// Ahora esa variable se ha convertido en objeto y tiene acceso a todos las características de la clase
+persona.getNombre();
+persona.pintarCabello("Amarillo");
+```
 
 ## 1.5. ¿Para qué sirve el operador `new`?
 
+Java es un lenguaje basado en Objetos y esto es posible con el operador new ya que sin el operador sólo se están declarando variables.
+> Prieto Saez, N. y Casanova Faus, A (2016) indica que:  
+“Cuando se desea utilizar un objeto de cierto tipo es necesario crearlo explícitamente utilizando el operador new” (p. 64). 
+
+Observemos el siguiente ejemplo:
+
+```java
+// Indica la declaración de una variable de tipo Carro
+Carro carro;
+// Ahora al utilizar el operador new, hace una referencia y se crea un objeto de // tipo Carro
+Carro carro = new Carro();
+```
+
+Prieto Saez, N. y Casanova Faus, A (2016) indica que cuando se crea un objeto, el sistema asigna dos partes de memorias diferentes y son:
+
+1. Una parte se asocia al objeto manteniendo toda su información y el lugar de memoria se crea durante la ejecución y se denomina montículo o heap. Su asignación es dinámica, lo que indica que al destruirse el objeto la memoria se libera.
+2. Otra parte se asocia a la variable con la que se nombra al objeto
+
+
+<div style="text-align:center;">
+<img :src="$withBase('/img/poo/2.png')" alt="Figura 2">
+<p>Asignación de Memoria al Crear un Objeto</p>
+</div>
+
 ## 1.6. ¿Qué es Garbage Collector?
 
-<div  style="text-align:center;">
-<h1>Trabajando 👷‍♂️...</h1>
-<img :src="$withBase('/gif/working.gif')" width="500" height="500"/>
+Cuando programamos solemos dejar variables, objetos, etc., sin referencia alguna y es ahí cuando el recolector de basura se pone a trabajar liberando toda esa memoria para que pueda ser reutilizada.
+En la siguienta figura se muestra cuando un objeto está desreferenciado.
+
+
+<div style="text-align:center;">
+<img :src="$withBase('/img/poo/3.png')" alt="Figura 3">
+<p>Objeto Desrefenciado</p>
 </div>
