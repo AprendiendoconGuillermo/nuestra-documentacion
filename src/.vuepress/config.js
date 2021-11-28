@@ -53,8 +53,7 @@ module.exports = {
         collapsable: true,
         children:[
           "/",
-          "/cursos",
-          "/vivo"
+          "/cursos"
         ] 
       },
       {
