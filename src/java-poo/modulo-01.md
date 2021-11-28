@@ -58,7 +58,7 @@ Los objetos que se crean, deben de alguna forma o manera interactuar entre sí, 
 Antes de nombrear a los atributos y métodos recuerda los [identificadores](/nuestra-documentacion/java-principiantes/modulo-03)
 ::: 
 
-## 1.1.2. Tipos de clases
+### 1.1.2. Tipos de clases
 
 Prieto et al., distingue tres tipos básicos y son:
 
@@ -67,7 +67,7 @@ Prieto et al., distingue tres tipos básicos y son:
 * **Clase de Utilidades**: repositorio de operaciones.
 
 
-## 1.1.3. ¿Cómo se grafica una clase?
+### 1.1.3. ¿Cómo se grafica una clase?
 
 Las clases se grafican mediante un rectángulo de forma vertical el cual tiene `3 secciones`:
 
@@ -82,6 +82,12 @@ Las clases se grafican mediante un rectángulo de forma vertical el cual tiene `
 :::tip
 * Una clase puede como no puede llevar atributos y métodos.
 * Una clase puede contener definiciones de otras clases denominadas internas.
+:::
+
+:::tip Criterio para definir una clase
+
+* Cuando aparezca un nuevo concepto.
+* Se requiera delegar código.
 :::
 
 ## 1.2. ¿Qué son los atributos?
@@ -114,6 +120,14 @@ class Persona{
     // métodos
 }
 ```
+
+:::tip Existen dos tipos de atributos:
+1. **De clase**  
+Pertenecen únicamente a la clase independiente si se ha creado o no el objeto.  
+Se los identifican por el modificador de acceso `static`.
+2. **De instancia**  
+Pertecen al objeto
+:::
 
 ## 1.2. ¿Qué son los métodos?  
 
@@ -161,6 +175,11 @@ class Persona{
     }
 }
 ```
+
+:::tip
+El lenguaje de Java permite la sobrecarga de métodos
+:::
+
 ## 1.3. ¿Qué es una instancia?
 
 Una instancia es el término utilizado para la creación de objetos.

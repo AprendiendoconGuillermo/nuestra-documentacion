@@ -79,8 +79,8 @@ boolean flag2 = flag;
 #### 4.1.1.3. Caracteres y Cadenas
 
 ```java
-char variableChar = ‘a’;
-String variableString = “Aprendiendo con Guillermo”;
+char variableChar = 'a';
+String variableString = "Aprendiendo con Guillermo";
 ```
 
 :::tip
