@@ -1,6 +1,5 @@
 <template>
 <div>
-    <button class="btn btn-primary"  v-on:click="di()">Dame Click</button> 
     <ion-icon name="caret-forward-circle-outline"></ion-icon>
     <br/>
     <br/>
@@ -12,8 +11,7 @@
 
 <script> 
 export default{    
-    methods: {
-        di : function tarjetas() {
+    mounted() {
         const arrayCursos=[
             {
                 cabecera: "Java",
@@ -92,7 +90,7 @@ export default{
         });
 
         cu.appendChild(fragment);
-        }
-    }   
+    }
+     
 }
 </script>
