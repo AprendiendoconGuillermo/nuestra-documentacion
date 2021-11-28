@@ -71,6 +71,11 @@ double variableDouble = 23.3;
 
 Sólo pueden tener dos valores: **`true y false`**, y se escriben siempre en minúscula.
 
+```java
+boolean flag = true;
+boolean flag2 = flag;
+```
+
 #### 4.1.1.3. Caracteres y Cadenas
 
 ```java

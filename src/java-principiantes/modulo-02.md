@@ -42,7 +42,7 @@ Es un mecanismo de programación que une al código y a los datos que manipula y
 Es el medio por el cual se comunican los objetos.
 
 <div style="text-align: center;">
-<img :src="$withBase('/img/mensaje.png')" alt="Figura 10. Mensaje">
+<img :src="$withBase('/img/mess.png')" alt="Figura 10. Mensaje">
 <p>Figura 10. Mensaje</p>
 </div>
 
